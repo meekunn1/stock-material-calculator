@@ -1,0 +1,37 @@
+as an CAD designer in charge of ordering material for PO.
+I want a web app
+So that I can quickly create a PO of the neccesary amount of material needed for the project
+
+Steel beam calculator:
+given a input space for max material length
+when I input a beam length
+then it is saved in a array as fixed purchase length
+when I choose tubing width, height, thickness
+then the information is added into the array
+
+given a input space for in stock material length
+when I input a beam length
+then it is saved in a different array for instock beam 
+when I choose tubing width, height, thickness
+then it is saved with the length array
+given an input space for the needed length
+when I input beam length and quantity required as set
+then information is used to calculate how many tubing need to be purchased
+when I press print button
+then 2 excel is produced. 1 with tubing information and quanity required for purchase, other shows how each purchased tubing will be divided for the project.
+
+pseudo code
+input purchase length,width,height,thickness
+then save input in array as new purchase item
+input stock length,width,height,thickness
+then save input as stock array.
+input more stock info
+then push input into stock array.
+then create new array(calculate base) to push new purchase item array content into stock array.
+input list of length x quantity.
+then length pushed into need length array in numbers declared by quantity.
+then order calculate base array to shortest to longest. use orEach to subtract stock length with items of need length, and used needed length is stored in object under the stock length. 
+when the stock length can no longer be subractred by nned length,
+then got to next item on calculate base and repeat process until no more item on list.
+then push new purchase item onto calculate base list and repeat until all items from need length is calculated.
+then calculate number of new puchase items pushed to the calculate base list to get how much new items need to be purchased.
